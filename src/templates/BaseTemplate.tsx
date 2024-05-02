@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useTranslations } from 'next-intl';
 
 import { AppConfig } from '@/utils/AppConfig';
@@ -10,13 +11,17 @@ const BaseTemplate = (props: {
   const t = useTranslations('BaseTemplate');
 
   return (
-    <div className="w-full px-1 text-gray-700 antialiased">
-      <div className="mx-auto max-w-screen-md">
+    <div className="w-full bg-[#2d2a49] px-1 text-white antialiased">
+      <div className="mx-auto max-w-screen-xl">
         <header className="border-b border-gray-300">
           <div className="pb-8 pt-16">
-            <h1 className="text-3xl font-bold text-gray-900">
-              {AppConfig.name}
-            </h1>
+            <div className="inline-block rounded-full  p-2">
+              <img
+                className="size-full md:size-2/5"
+                src="https://ptcdn.info/mobile/logo-mobile-pantip-white.png"
+                alt=""
+              />
+            </div>
             <h2 className="text-xl">{t('description')}</h2>
           </div>
 
